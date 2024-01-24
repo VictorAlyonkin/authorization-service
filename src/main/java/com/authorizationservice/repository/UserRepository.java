@@ -7,8 +7,12 @@ import java.util.List;
 @Repository
 public class UserRepository {
 
+    private static final String USER = "user";
+    private static final String PASSWORD = "password";
+
+
     public List<Authorities> getUserAuthorities(String user, String password) {
-        if ("user".equals(user) && "password".equals(password))
+        if (USER.equals(user) && PASSWORD.equals(password))
             return List.of(Authorities.values());
         return null;
     }
